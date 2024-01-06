@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat+Brush%3A400" />
+  <link rel="stylesheet" href="./styles/frame-1.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+ 
+</head>
+
+<body class="bg" onload="myFunction()" style="margin:0;">
+
+
+  <div id="loader" style="color:red;"></div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+
+
+      <div class="frame-1-J2G">
+        <div class="desktop-1-v3e">
+
+        </div>
+
+        <header>
+          <div class="navbar-1-default-DVv" id="nav-menu">
+            <div class="dropdown">
+              <span>
+                <ol>
+                <li class="auto-group-euva-876"><a href=frame-1.html class="nav__link active"style="color: #a218c5; ;">Menu</a></li>
+                </ol>
+              </span>
+              <div class="dropdown-content">
+                <ol>
+                <li class="auto-group-xzd2-7Up"><a href=frame-1.html class="nav__link active">Home</a></li>
+                <li class="auto-group-j8a8-MPA"><a href=about.html class="nav__link active">About Me</a></li>
+                <li class="auto-group-t5kg-okx"><a href="#skills" class="nav__link active">Skills</a></li>
+                <li class="auto-group-hqjs-Sov"><a href=work.html class="nav__link active">Work</a></li>
+                <li class="auto-group-xbic-hzk"><a href="#contact" class="nav__link active">Contact</a></li>
+              </ol>
+              </div>
+            </div>
+          
+            <li class="auto-group-xzd2-7Up"><a href=frame-1.html class="nav__link active">Home</a></li>
+            <li class="auto-group-j8a8-MPA"><a href=about.html class="nav__link active">About Me</a></li>
+            <li class="auto-group-t5kg-okx"><a href="#skills" class="nav__link active">Skills</a></li>
+            <li class="auto-group-hqjs-Sov"><a href=work.html class="nav__link active">Work</a></li>
+            <li class="auto-group-xbic-hzk"><a href="#contact" class="nav__link active">Contact</a></li>
+         
+          </div>
+
+        </header>
+
+
+
+        <section>
+
+          <div class="text-container"></div>
+          <div class="text-box">
+            <h2>Welcome to Elvis' Portfolio</h2>
+            <p> Use the navbar or scroll down to know more about me</p>
+            <div class="word">
+
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container reveal fade-bottom">
+
+            <div class="text-container">
+              <div class="text-box">
+                <h3>About Me !!!</h3>
+                <p>
+                  "Started coding in 2017 during college, initially for computer science.
+                  Despite changing paths, rediscovered the joy of coding in 2021 while leading a successful game
+                  project, 'Tales of Sinestra.'
+                  Inspired by the experience, I joined a software engineering bootcamp in 2023 to deepen my tech skills
+                  and explore new opportunities."
+                </p>
+                <p><a href=about.html class="nav__link active"> Click to know more</a>
+                </p>
+              </div>
+              <div class="text-box">
+                <div class="profile-picture">
+
+                  <img src="./assets/profile pic.png" alt="Profile picture">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        
+        <section>
+          <div id="skills" class="container reveal fade-left">
+
+            <div class="text-container">
+              <div class="text-box ">
+                <h3>My Cv</h3>
+
+                 <div id="pdf-container">
+        <embed src="./assets/E.T CV.pdf" alt="CV pdf" width="100%" height="100%" type="application/pdf">
+    </div>
+              </div>
+              <div class="text-box">
+                <h3>My Skills</h3>
+                <canvas id="myChart" style="width:100%;max-width:600px" color="white"></canvas>
+
+                <script> 
+                Chart.defaults.global.defaultFontColor = "#fff";
+                const xValues = ["","HTML", "CSS", "Python", "Twinery", "Js", "React", ""];
+                const yValues = [0, 80, 85, 75, 87, 70, 55,];
+                const barColors = "red";
+                new Chart("myChart", {
+                  type: "horizontalBar",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      x: [{
+                        ticks: {
+                          fontColor: 'white'
+                        }
+                      }],
+                      y: [{
+                        ticks: {
+                          fontColor: 'white'
+                        }
+                      }]
+                    },
+                    legend: {display: false},
+                    plugins: {
+                      title: {
+                        display: true,
+                        text: "My skills",
+                        color: 'white'
+                      }
+                    }
+                  }
+                });
+                </script>
+                
+
+                <p>
+              Here is a chart of my skills with certain software. I'm still working on understanding react.js as well as other software through watching 
+              tutorials and mini projects in the future. 
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="container reveal fade-right">
+            <div class="text-container">
+              <div class="text-box">
+                <h3>Work</h3>
+                <p>
+            
+In my coding journey, I've worked on various projects, some finished and others still in progress. 
+Completed projects showcase my ability to write code, spanning from web development to software solutions. 
+Meanwhile, ongoing projects highlight my commitment to continuous learning and exploration of new technologies.
+ I'm excited to share both my achievements and the evolving path of my coding journey.
+                </p>
+                <p><a href=work.html class="nav__link active"> Check it out</a>
+              </div>
+
+              <div class="text-box">
+
+                <div class="caro-container">
+
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                      <div class="item active">
+                        <img src="./assets/project 1 TOS.png" alt="Tales-of-Sinestra" style="width:auto;">
+                        <div class="carousel-caption">
+
+                          <p>Tales of Sinestra</p>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/Rock Paper Scissors.png" alt="Rock-Paper-Scissors picture"  style="width:auto;">
+                        <div class="carousel-caption">
+
+                          <p>Rock Paper Scissors</p>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="./assets/Zombie game.png" alt="Zombie game picture" style="width:auto;">
+                        <div class="carousel-caption">
+
+                          <p>Zombie Survival</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div id="contact" class="container reveal fade-bottom">
+      
+       
+            <div class="text-container">
+              <div class="text-box">
+                <h3>Contact Me</h3>
+               
+
+                  <p> Via Email <a href="mailto:elvisoyenekan@gmail.com" class="footer__link">| elvisoyenekan@gmail.com |</a></p>
+                  <p> Via Linkedin <a href="https://uk.linkedin.com/in/elvis-oyenekan" class="footer__link">| Elvis Oyenekan |</a></p>
+                  <p> Via Github <a href="https://github.com/Elvo12?tab=repositories" class="footer__link">| Elvo12 |</a></p>
+                  <p> Via Codepen <a href="https://codepen.io/Elvo12" class="footer__link">| Elvo12 |</a></p>
+
+        
+      
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <footer class="footer">
+          <p class="footer__title">| Elvis' Portfolio |</p>
+          <h2>
+            <a href=frame-1.html class="footer__link">| Home |</a>
+            <a href=about.html class="footer__link">About Me |</a>
+            <a href="#skills" class="footer__link">Skills |</a>
+            <a href=work.html class="footer__link">Work |</a>
+            <a href="#contact" class="footer__link">Contact |</a>
+          </h2>
+
+        </footer>
+      </div>
+      <script>
+        var myVar;
+
+        function myFunction() {
+          myVar = setTimeout(showPage, 2000);
+        }
+
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+      </script>
+    </body>
+  </div>
+</html>
